@@ -1,0 +1,11 @@
+# Hauptverantwortliche werden bei Pull Requests automatisch als Reviewer angefragt.
+/.github/                 @muhammedasifshahulhameed-01
+/docs/00_team/            @muhammedasifshahulhameed-01
+/docs/01_anforderungen/   @muhammedasifshahulhameed-01
+/docs/05_management/      @muhammedasifshahulhameed-01
+/docs/06_feedback/        @muhammedasifshahulhameed-01
+/docs/02_entwurf/         @mahdifazeli46-ux
+/src/                     @BennetS4
+/docs/03_implementierung/ @BennetS4
+/tests/                   @AnilD-00
+/docs/04_testen/          @AnilD-00

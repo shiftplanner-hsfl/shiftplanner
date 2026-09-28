@@ -1,0 +1,3 @@
+# Präsentationen
+
+Folien als PDF ablegen: `P1_idee-und-team.pdf`, `P2_anforderungen.pdf`, ...

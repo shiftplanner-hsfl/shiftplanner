@@ -1,0 +1,30 @@
+[project]
+name = "shiftplanner"
+version = "0.1.0"
+description = "Faire, nachvollziehbare automatische Schichtplanung"
+requires-python = ">=3.12"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+extend-exclude = ["src/**/migrations"]
+
+[tool.ruff.lint]
+# E/W: PEP 8, F: Fehler, I: Import-Sortierung, N: Namenskonventionen,
+# B: typische Fehlerquellen, UP: moderne Syntax, D: Docstrings (Google-Stil)
+select = ["E", "W", "F", "I", "N", "B", "UP", "D"]
+ignore = ["D104"]  # Paket-__init__.py ohne Docstring erlaubt
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["D"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["config", "scheduling"]
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "config.settings"
+pythonpath = ["src"]
+testpaths = ["tests"]

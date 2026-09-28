@@ -1,0 +1,45 @@
+name: Bug / Defekt
+description: Fehler aus Test oder Review melden
+title: "[Bug] "
+labels: ["typ: bug"]
+body:
+  - type: input
+    id: gefunden
+    attributes:
+      label: Gefunden durch
+      placeholder: "Testfall TC-012 / Review von PR #40 / Nutzertest"
+    validations:
+      required: true
+  - type: textarea
+    id: schritte
+    attributes:
+      label: Schritte zur Reproduktion
+      placeholder: |
+        1. ...
+        2. ...
+    validations:
+      required: true
+  - type: textarea
+    id: erwartet
+    attributes:
+      label: Erwartetes Ergebnis (Testorakel)
+    validations:
+      required: true
+  - type: textarea
+    id: tatsaechlich
+    attributes:
+      label: Tatsächliches Ergebnis
+    validations:
+      required: true
+  - type: dropdown
+    id: schwere
+    attributes:
+      label: Schweregrad
+      options: [kritisch, hoch, mittel, niedrig]
+    validations:
+      required: true
+  - type: input
+    id: umgebung
+    attributes:
+      label: Umgebung / Version
+      placeholder: "Commit abc1234, Chrome, Windows 11"

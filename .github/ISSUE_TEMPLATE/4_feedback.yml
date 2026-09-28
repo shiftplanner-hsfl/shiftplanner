@@ -1,0 +1,47 @@
+name: Kundenfeedback
+description: Feedback einer realen Person (Kundin/Kunde, Expertin/Experte) dokumentieren
+title: "[Feedback] "
+labels: ["typ: feedback", "bereich: anforderungen"]
+body:
+  - type: markdown
+    attributes:
+      value: "Keine sensiblen personenbezogenen Daten – nur Rolle und Bezug zur Zielgruppe."
+  - type: input
+    id: kennung
+    attributes:
+      label: Feedback-ID (wie im Feedback-Log)
+      placeholder: FB-001
+    validations:
+      required: true
+  - type: input
+    id: wer
+    attributes:
+      label: Wer? (Rolle / Bezug zur Zielgruppe)
+      placeholder: "Filialleitung Einzelhandel, ca. 18 Beschäftigte"
+    validations:
+      required: true
+  - type: dropdown
+    id: wie
+    attributes:
+      label: Wie?
+      options: [Interview, Prototyp-Test, Umfrage, Beobachtung, Nutzertest, Sonstiges]
+    validations:
+      required: true
+  - type: input
+    id: datum
+    attributes:
+      label: Datum
+      placeholder: "2026-10-05"
+  - type: textarea
+    id: ergebnis
+    attributes:
+      label: Ergebnis / zentrale Aussagen
+    validations:
+      required: true
+  - type: textarea
+    id: konsequenz
+    attributes:
+      label: Konsequenz für das Produkt
+      description: Welche Anforderung oder Änderung entsteht daraus? Issues verlinken (#…).
+    validations:
+      required: true

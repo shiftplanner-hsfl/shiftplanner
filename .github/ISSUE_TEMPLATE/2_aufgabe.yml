@@ -1,0 +1,25 @@
+name: Aufgabe
+description: Arbeitspaket (Dokument, Diagramm, Setup, Präsentation ...)
+labels: ["typ: aufgabe"]
+body:
+  - type: textarea
+    id: ziel
+    attributes:
+      label: Ziel
+    validations:
+      required: true
+  - type: textarea
+    id: kriterien
+    attributes:
+      label: Akzeptanzkriterien
+      value: |
+        - [ ] 
+    validations:
+      required: true
+  - type: dropdown
+    id: bereich
+    attributes:
+      label: Bereich
+      options: [Anforderungen, Architektur, Implementierung, QA, Management]
+    validations:
+      required: true
